@@ -117,6 +117,10 @@ function orientation(event) { //角速度
     dataList["direction"] = direction;
     document.querySelector("#direction").innerHTML =
         direction + " : " + degrees;
+
+    console.log(initialAlpha);
+    console.log(initialBeta);
+    console.log(initialGamma);
 }
 
 navigator.geolocation.watchPosition((position) => { //GPS位置情報
