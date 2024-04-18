@@ -39,7 +39,7 @@ window.onload = function init() {
             orientation,
             true
         );
-        window.addEventListener('devicemotion', gsensor);
+        window.addEventListener('devicemotion', gSensor);
     } else if (os == "android") {
         window.addEventListener(
             "deviceorientationabsolute",
@@ -47,14 +47,14 @@ window.onload = function init() {
             true
         );
         acceleration_offset = -1;
-        window.addEventListener('devicemotion', gsensor);
+        window.addEventListener('devicemotion', gSensor);
     } else {
         window.alert("PC未対応サンプル");
     }
     console.log('test');
 }
 
-function gsensor(event) { //加速度
+function gSensor(event) { //加速度
     let aX = event.acceleration.x;    
     let aY = event.acceleration.y;    
     let aZ = event.acceleration.z;    
