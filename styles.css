@@ -1,0 +1,41 @@
+/* styles.css */
+
+/*背景*/
+body{
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(201, 225, 186);
+}
+
+/* ボタンのスタイル */
+.btn {
+    padding: 12px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: hwb(211 65% 2%);
+    color: #070707;
+    border: none;
+    cursor: pointer;
+    margin: 8px;
+}
+
+.btn:hover {
+    background-color: #ff1717;
+}
+
+/* データラベルのスタイル */
+.data-label {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+/* データのスタイル */
+.data {
+    font-size: 20px;
+    color: #333;
+}
