@@ -51,6 +51,7 @@ window.onload = function init() {
     } else {
         window.alert("PC未対応サンプル");
     }
+    console.log('test');
 }
 
 function gsensor(event) { //加速度
