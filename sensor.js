@@ -26,7 +26,7 @@ function detectOSSimply() {
     return ret;
 }
 
-function init() {
+window.onload = function init() {
     let os; // OS識別用
     window.addEventListener("DOMContentLoaded", init); // DOM構築完了イベントハンドラ登録
     // 簡易的なOS判定
