@@ -4,11 +4,15 @@
 body{
     margin: 0;
     padding: 0;
-
-    display: inline-block;
     align-items: center;
     overflow: hidden;
     background-color: rgb(255, 213, 175);
+}
+
+/*ボタン配置*/
+#buttonArea {
+    display: inline-block;
+    line-height: 2.3;
 }
 
 /* ボタンのスタイル */
