@@ -108,8 +108,8 @@ function gyro(event) { //角速度
     dataList["beta"] = initialBeta;
     dataList["gamma"] = initialGamma;
     dataList["direction"] = direction;
-    document.querySelector("#direction").innerHTML =
-        direction + " : " + degrees;
+    //document.querySelector("#direction").innerHTML =
+        //direction + " : " + degrees;
 }
 
 navigator.geolocation.watchPosition((position) => { //GPS位置情報
