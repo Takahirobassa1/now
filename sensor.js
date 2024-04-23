@@ -34,22 +34,14 @@ window.onload = function init() {
     if (os == "iphone") {
         // safari用。DeviceOrientation APIの使用をユーザに許可して貰う
         document.querySelector("#permit").addEventListener("click", permitDeviceOrientationForSafari);
-        window.addEventListener(
-            'deviceorientationabsolute',
-            gyro,
-            true
-        );
-        window.addEventListener('devicemotion', gSensor);
+        window.addEventListener("deviceorientation",gyro,true);
+        window.addEventListener("devicemotion", gSensor);
         window.alert("iPhone");
     } else if (os == "android") {
         window.alert("アンドロイド");
-        window.addEventListener(
-            'deviceorientationabsolute',
-            gyro,
-            true
-        );
+        window.addEventListener("deviceorientation",gyro,true);
         acceleration_offset = -1;
-        window.addEventListener('devicemotion', gSensor);
+        window.addEventListener("devicemotion", gSensor);
     } else {
         window.alert("PC未対応サンプル");
     }
