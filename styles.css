@@ -39,3 +39,14 @@ body{
     font-size: 20px;
     color: #333;
 }
+
+/* スマホの時だけ改行させるクラス*/
+.buttonArea {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .buttonArea {
+        display: block;
+    }
+}
