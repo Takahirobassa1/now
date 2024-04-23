@@ -35,7 +35,7 @@ window.onload = function init() {
         // safari用。DeviceOrientation APIの使用をユーザに許可して貰う
         document.querySelector("#permit").addEventListener("click", permitDeviceOrientationForSafari);
         window.addEventListener(
-            'deviceorientation',
+            'deviceorientationabsolute',
             gyro,
             true
         );
