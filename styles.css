@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
 
-    display: flex;
+    display: inline-block;
     align-items: center;
     overflow: hidden;
     background-color: rgb(201, 225, 186);
