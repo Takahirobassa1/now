@@ -9,7 +9,7 @@ body{
     background-color: rgb(255, 213, 175);
 }
 
-/*ボタン配置*/
+/* ボタンの配置*/
 #buttonArea {
     display: inline-block;
     line-height: 2.3;
