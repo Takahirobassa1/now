@@ -32,8 +32,6 @@ window.onload = function init() {
     // 簡易的なOS判定
     os = detectOSSimply();
     if (os == "iphone") {
-        // safari用。DeviceOrientation APIの使用をユーザに許可して貰う
-        //document.querySelector("#permit").addEventListener("click", permitDeviceOrientation);
         window.addEventListener("deviceorientation",gyro,true);
         window.addEventListener("devicemotion", gSensor);
         window.alert("iPhone");
@@ -108,8 +106,6 @@ function gyro(event) { //角速度
     dataList["beta"] = initialBeta;
     dataList["gamma"] = initialGamma;
     dataList["direction"] = direction;
-    //document.querySelector("#direction").innerHTML =
-        //direction + " : " + degrees;
 }
 
 navigator.geolocation.watchPosition((position) => { //GPS位置情報
@@ -126,8 +122,6 @@ function sensor() {
     document.querySelector("#lat").innerHTML = dataList["lat"];
     document.querySelector("#lng").innerHTML = dataList["lng"];
     document.querySelector("#acc").innerHTML = dataList["acc"];
-
-    document.querySelector("#absolute").innerHTML = dataList["absolute"];
     document.querySelector("#direction").innerHTML = dataList["direction"];
     document.querySelector("#alpha").innerHTML = dataList["alpha"];
     document.querySelector("#beta").innerHTML = dataList["beta"];
