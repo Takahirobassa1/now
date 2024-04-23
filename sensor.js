@@ -127,7 +127,7 @@ function sensor() {
     document.querySelector("#lng").innerHTML = dataList["lng"];
     document.querySelector("#acc").innerHTML = dataList["acc"];
 
-    //document.querySelector("#absolute").innerHTML = dataList["absolute"];
+    document.querySelector("#absolute").innerHTML = dataList["absolute"];
     document.querySelector("#direction").innerHTML = dataList["direction"];
     document.querySelector("#alpha").innerHTML = dataList["alpha"];
     document.querySelector("#beta").innerHTML = dataList["beta"];
