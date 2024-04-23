@@ -1,4 +1,4 @@
-
+var os; // OS識別用
 var acceleration_offset = 1;
 var initialAlpha = 0;// ジャイロセンサーの初期値を0で初期化
 var initialBeta = 0;
@@ -27,7 +27,6 @@ function detectOSSimply() {
 }
 
 window.onload = function init() {
-    let os; // OS識別用
     window.addEventListener("DOMContentLoaded", init); // DOM構築完了イベントハンドラ登録
     // 簡易的なOS判定
     os = detectOSSimply();
