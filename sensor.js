@@ -36,14 +36,16 @@ window.onload = function init() {
         document.querySelector("#permit").addEventListener("click", permitDeviceOrientationForSafari);
         window.addEventListener(
             "deviceorientation",
-            orientation,
+            gyro,
             true
         );
         window.addEventListener('devicemotion', gSensor);
+        window.alert("iPhone");
     } else if (os == "android") {
+        window.alert("アンドロイド");
         window.addEventListener(
             "deviceorientationabsolute",
-            orientation,
+            gyro,
             true
         );
         acceleration_offset = -1;
@@ -51,7 +53,6 @@ window.onload = function init() {
     } else {
         window.alert("PC未対応サンプル");
     }
-    console.log('test');
 }
 
 function gSensor(event) { //加速度
@@ -64,7 +65,7 @@ function gSensor(event) { //加速度
     dataList["Z"] = acceleration_offset * aZ; // z軸の重力加速度（Android と iOSでは正負が逆）
 }
 
-function orientation(event) { //角速度
+function gyro(event) { //角速度
     let absolute = event.absolute;
 
     let alpha = event.alpha;
@@ -117,10 +118,6 @@ function orientation(event) { //角速度
     dataList["direction"] = direction;
     document.querySelector("#direction").innerHTML =
         direction + " : " + degrees;
-
-    console.log(initialAlpha);
-    console.log(initialBeta);
-    console.log(initialGamma);
 }
 
 navigator.geolocation.watchPosition((position) => { //GPS位置情報
