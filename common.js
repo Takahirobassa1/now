@@ -27,12 +27,13 @@ function sensor_off() {
 }
 
 // iPhone + Safariの場合はDeviceOrientation APIの使用許可をユーザに求める
-function permitDeviceOrientationForSafari() {
+function permitDeviceOrientation() {
     DeviceOrientationEvent.requestPermission()
         .then(response => {
             if (response === "granted") {
                 window.addEventListener(
                     "deviceorientation",
+                    "devicemotion",
                     detectDirection
                 );
             }
