@@ -11,9 +11,9 @@
 <body>
     <div id="dataArea">
         <div id="buttonArea">
-            <input type="button" id="permit" class="btn" value="Sensor許可" onclick="permitDeviceOrientationForSafari()"/></input>
+            <input type="button" id="permit" class="btn" value="Sensor許可" onclick="permitDeviceOrientation()"/></input>
             <button id="startStop" class="btn" onclick="startstop()">測定開始</button>
-            <a type="button" id="download" class="btn" onclick="exportcsv();">データ・ダウンロード</a>
+            <a type="button" id="download" class="btn" onclick="exportcsv()">データ・ダウンロード</a>
         </div>
         <div id="labelList">
             <ul>
@@ -32,9 +32,9 @@
         </div>
     </div>
 
-    <script src="./common.js"></script>
-    <script src="./sensor.js"></script>
-    <script src="./jquery-1.8.2.min.js"></script>
+    <script src="./components/common.js"></script>
+    <script src="./components/sensor.js"></script>
+    <script src="./components/jquery-1.8.2.min.js"></script>
 
 </body>
 
