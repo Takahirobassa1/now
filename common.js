@@ -33,7 +33,6 @@ function permitDeviceOrientation() {
             if (response === "granted") {
                 window.addEventListener(
                     "deviceorientation",
-                    "devicemotion",
                     detectDirection
                 );
             }
