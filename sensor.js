@@ -1,3 +1,4 @@
+
 var os; // OS識別用
 var acceleration_offset = 1;
 var initialAlpha = 0;// ジャイロセンサーの初期値を0で初期化
@@ -57,7 +58,7 @@ function gSensor(event) { //加速度
 }
 
 function gyro(event) { //角速度
-    let absolute = event.absolute;
+    //let absolute = event.absolute;
 
     let alpha = event.alpha;
     let beta = event.beta;
@@ -114,19 +115,20 @@ function gyro(event) { //角速度
 navigator.geolocation.watchPosition((position) => { //GPS位置情報
     let lat = position.coords.latitude;            // 緯度を取得
     let lng = position.coords.longitude;           // 経度を取得
-    let accu = position.coords.accuracy;            // 緯度・経度の精度を取得 数値mで表される
+    let acc = position.coords.accuracy;            // 緯度・経度の精度を取得 数値mで表される
     dataList["lat"] = lat;
     dataList["lng"] = lng;
-    dataList["acc"] = accu;
+    dataList["acc"] = acc;
 });
 
 function sensor() {
 
     document.querySelector("#lat").innerHTML = dataList["lat"];
     document.querySelector("#lng").innerHTML = dataList["lng"];
-    document.querySelector("#accu").innerHTML = dataList["accu"];
+    document.querySelector("#acc").innerHTML = dataList["acc"];
 
-    document.querySelector("#absolute").innerHTML = dataList["absolute"];
+    //document.querySelector("#absolute").innerHTML = dataList["absolute"];
+    document.querySelector("#direction").innerHTML = dataList["direction"];
     document.querySelector("#alpha").innerHTML = dataList["alpha"];
     document.querySelector("#beta").innerHTML = dataList["beta"];
     document.querySelector("#gamma").innerHTML = dataList["gamma"];
