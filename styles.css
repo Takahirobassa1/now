@@ -4,6 +4,8 @@
 body{
     margin: 0;
     padding: 0;
+
+    display: inline-block;
     align-items: center;
     overflow: hidden;
     background-color: rgb(201, 225, 186);
@@ -19,6 +21,8 @@ body{
     border: none;
     cursor: pointer;
     margin: 8px;
+    border-radius:.70em;
+
 }
 
 .btn:hover {
@@ -40,11 +44,7 @@ body{
 
 /* スマホの時だけ改行させるクラス*/
 .buttonArea {
-    display: none;
+    display: inline-block;
 }
 
-@media (max-width: 600px) {
-    .buttonArea {
-        display: block;
-    }
-}
+
